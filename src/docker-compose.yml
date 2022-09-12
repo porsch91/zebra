@@ -6,7 +6,7 @@ services:
     build: .
     restart: always
     ports:
-      - '3090:3090'
+      - '9091:9091'
     depends_on:
       - mongo
       - prometheus
@@ -30,7 +30,7 @@ services:
     container_name: zebra-grafana
     image: grafana/grafana:8.2.2
     ports:
-      - '9000:3000'
+      - '9092:9092'
     depends_on:
       - prometheus
     volumes:
